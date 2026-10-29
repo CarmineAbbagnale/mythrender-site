@@ -172,6 +172,28 @@ nav.primary a[aria-current="page"] { color: var(--accent); }
 .shot-frame img {
   display: block; width: 100%; height: auto; border-radius: 0 0 10px 10px;
 }
+.shot-frame { position: relative; }
+.shot-badge {
+  position: absolute; left: 18px; bottom: 18px;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(20, 16, 11, 0.88); backdrop-filter: blur(4px);
+  border: 1px solid var(--accent); color: var(--text);
+  font-family: var(--font-display); font-size: 0.82rem; letter-spacing: 0.02em;
+  border-radius: 999px; padding: 8px 16px 8px 12px;
+  text-decoration: none; box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.7);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.shot-badge:hover { transform: translateY(-2px); border-color: var(--accent2); }
+.shot-badge .ico { color: var(--accent); }
+.platform-row {
+  margin: 16px 0 0; color: var(--muted); font-size: 0.88rem; letter-spacing: 0.01em;
+}
+.platform-row strong { color: var(--text); font-weight: 600; }
+.feature-cta {
+  display: inline-block; color: var(--accent); font-weight: 600; text-decoration: none;
+  border-bottom: 1px solid transparent; transition: border-color 0.15s ease;
+}
+.feature-cta:hover { border-color: var(--accent); }
 /* BUG FIX (2026-09-03, segnalato dall'utente: "alcune immagini sono storte"): la leggera
    rotazione qui applicata cozzava con l'interfaccia dell'app dentro lo screenshot, piena di
    bordi e linee dritte, facendola sembrare un errore di allineamento invece di un tocco di
